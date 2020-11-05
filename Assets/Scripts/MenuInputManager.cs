@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -7,6 +8,7 @@ public class MenuInputManager : MonoBehaviour
 {
     [SerializeField] GameState okState = GameState.Null;
     [SerializeField] GameState cancelState = GameState.Null;
+    [SerializeField] TextMeshProUGUI content;
 
     void Update()
     {
@@ -32,5 +34,10 @@ public class MenuInputManager : MonoBehaviour
             GameManager.instance.UIPlayClick();
             GameManager.instance.SetState(okState);
         }
+    }
+
+    public void SetContent(string text)
+    {
+        content?.SetText(text);
     }
 }

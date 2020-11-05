@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -14,11 +15,18 @@ public class GameManager : MonoBehaviour
     public GameObject helpMenu;
     public GameObject winMenu;
     public GameObject loseMenu;
+    public GameObject hud;
+    public GameObject debugPanel;
+    public TextMeshProUGUI scoreText;
 
     [Header("Sound Effects")]
     public AudioClip sfxClick;
+    public AudioClip sfxWin;
+    public AudioClip sfxLose;
+    public AudioClip sfxScore;
     [HideInInspector] public AudioSource uiAudioSource;
 
+    int score = 0;
 
     GameState state;
 
@@ -30,6 +38,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        InitGame();
+    }
+
+    private void InitGame()
+    {
+        SetScore(0);
         SetState(GameState.StartMenu);
     }
 
@@ -42,10 +56,31 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (state == GameState.Play)
+        {
             if (Input.GetKeyDown(KeyCode.Escape))
                 OnEscapePressed();
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                AddScore(1);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                Win();
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+                Lose();
+        }
     }
 
+    public void Win()
+    {
+        UIPlayOneShot(sfxWin);
+        winMenu.GetComponent<MenuInputManager>().SetContent($"Score: {score}");
+        SetState(GameState.Win);
+    }
+
+    public void Lose()
+    {
+        UIPlayOneShot(sfxLose);
+        loseMenu.GetComponent<MenuInputManager>().SetContent($"Score: {score}");
+        SetState(GameState.Lose);
+    }
 
     public void UIPlayClick()
     {
@@ -62,6 +97,7 @@ public class GameManager : MonoBehaviour
         UIPlayClick();
     }
 
+
     void OnEscapePressed()
     {
         UIPlayClick();
@@ -73,11 +109,30 @@ public class GameManager : MonoBehaviour
         Debug.Log($"SetState({state})");
         this.state = state;
 
+        if (state == GameState.Init)
+        {
+            InitGame();
+            return;
+        }
+
         startMenu.SetActive(state == GameState.StartMenu);
         pauseMenu.SetActive(state == GameState.Pause);
         helpMenu.SetActive(state == GameState.Help);
         winMenu.SetActive(state == GameState.Win);
         loseMenu.SetActive(state == GameState.Lose);
+        hud.SetActive(state == GameState.Play);
     }
 
+
+    public void AddScore(int increment)
+    {
+        UIPlayOneShot(sfxScore);
+        SetScore(score + increment);
+    }
+
+    public void SetScore(int value)
+    {
+        score = value;
+        scoreText.SetText("Score: " + value);
+    }
 }
