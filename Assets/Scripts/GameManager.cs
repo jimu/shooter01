@@ -57,9 +57,9 @@ public class GameManager : MonoBehaviour
     {
         if (state == GameState.Play)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (/*Input.GetKeyDown(KeyCode.Escape) || */Input.GetButtonDown("Cancel"))
                 OnEscapePressed();
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (/*Input.GetKeyDown(KeyCode.Alpha1) || */Input.GetButtonDown("Submit"))
                 AddScore(1);
             if (Input.GetKeyDown(KeyCode.Alpha2))
                 Win();

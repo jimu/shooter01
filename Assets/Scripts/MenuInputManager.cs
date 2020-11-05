@@ -12,10 +12,10 @@ public class MenuInputManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            OnCancel();
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (/*Input.GetKeyDown(KeyCode.Return) || */ Input.GetButtonDown("Submit"))
             OnOkay();
+        if (/*Input.GetKeyDown(KeyCode.Escape) || */ Input.GetButtonDown("Cancel"))
+            OnCancel();
     }
 
     public void OnCancel()
