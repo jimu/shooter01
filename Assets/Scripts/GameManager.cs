@@ -57,14 +57,16 @@ public class GameManager : MonoBehaviour
     {
         if (state == GameState.Play)
         {
-            if (/*Input.GetKeyDown(KeyCode.Escape) || */Input.GetButtonDown("Cancel"))
+            if (Input.GetButtonDown("Cancel"))
                 OnEscapePressed();
-            if (/*Input.GetKeyDown(KeyCode.Alpha1) || */Input.GetButtonDown("Submit"))
+            if (Input.GetButtonDown("Submit"))
                 AddScore(1);
             if (Input.GetKeyDown(KeyCode.Alpha2))
                 Win();
             if (Input.GetKeyDown(KeyCode.Alpha3))
                 Lose();
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().TogglePerspective();
         }
     }
 
@@ -133,6 +135,6 @@ public class GameManager : MonoBehaviour
     public void SetScore(int value)
     {
         score = value;
-        scoreText.SetText("Score: " + value);
+        scoreText.SetText(value.ToString());
     }
 }
