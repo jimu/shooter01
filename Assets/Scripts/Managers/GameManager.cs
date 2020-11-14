@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,7 @@ public class GameManager : MonoSingleton<GameManager>
     public GameObject debugPanel;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
+    public TextMeshProUGUI flashText;
 
     [Header("Sound Effects")]
     public AudioClip sfxClick;
@@ -159,4 +161,17 @@ public class GameManager : MonoSingleton<GameManager>
     }
 
 
+    public void FlashMessage(string message)
+    {
+        flashText.text = message;
+        flashText.gameObject.SetActive(true);
+
+        StartCoroutine(HideFlashMessage(1f));
+    }
+
+    IEnumerator HideFlashMessage(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        flashText.gameObject.SetActive(false);
+    }
 }

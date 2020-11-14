@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerFireController : MonoBehaviour
 {
     public WeaponMount[] weaponMounts;
-    
-    public Weapon weaponAlternate1;
+
 
     void Start()
     {
@@ -23,18 +22,22 @@ public class PlayerFireController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-            SetWeapon(weaponMounts[0], weaponAlternate1.prefab);
-        if (Input.GetKeyDown(KeyCode.F))
-            FireWeapon(weaponMounts[0].weapons[0], weaponMounts[0].transform);
         if (Input.GetKeyDown(KeyCode.G))
-            FireWeapon(weaponMounts[1].weapons[0], weaponMounts[1].transform);
+            FireWeapon(weaponMounts[0].weapons[0], weaponMounts[0].transform);
         if (Input.GetKeyDown(KeyCode.H))
+            FireWeapon(weaponMounts[1].weapons[0], weaponMounts[1].transform);
+        if (Input.GetKeyDown(KeyCode.F))
             FireWeapon(weaponMounts[2].weapons[0], weaponMounts[2].transform);
     }
 
     void FireWeapon(Weapon weapon, Transform transform)
     {
         ProjectileLauncher.Launch(weapon.projectile, weapon.fireSFX, transform);
+    }
+
+    public void UpgradeWeapon(int index)
+    {
+        if (weaponMounts[index].weapons[0].upgrade != null)
+            weaponMounts[index].weapons[0] = weaponMounts[index].weapons[0].upgrade;
     }
 }

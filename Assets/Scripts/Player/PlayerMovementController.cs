@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
  */
 public class PlayerMovementController : MonoBehaviour
 {
+    static readonly float SPEED_UPGRADE_AMOUNT = 2f;
+
     [Tooltip("Speed of player ship")]
     private float speed;
 
@@ -131,5 +133,11 @@ public class PlayerMovementController : MonoBehaviour
             }
 
         }
+    }
+
+
+    public void UpgradeSpeed()
+    {
+        speed += SPEED_UPGRADE_AMOUNT;
     }
 }

@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class HealthController : MonoDamagable
 {
-    [SerializeField] private int maxHealth = 100;
-    
+    static readonly int MAX_HEALTH_UPGRADE_AMOUNT = 2;
+
+    [SerializeField] private int maxHealth;
     [SerializeField] private int health;
     [SerializeField] bool inactivateOnZeroHealth = false;
     private AudioClip hurtSFX;
@@ -87,5 +88,11 @@ public class HealthController : MonoDamagable
     public void RestoreHealth()
     {
         SetHealth(maxHealth);
+    }
+
+    public void UpgradeMaxHealth()
+    {
+        maxHealth += MAX_HEALTH_UPGRADE_AMOUNT;
+        SetHealth(health + MAX_HEALTH_UPGRADE_AMOUNT);
     }
 }

@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4967808485401872038}
   m_Layer: 0
   m_Name: ScoreLootDrop
-  m_TagString: Drop
+  m_TagString: ScoreDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

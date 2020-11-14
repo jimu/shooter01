@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Drop
+  - ScoreDrop
+  - UpgradeDrop
+  - DangerDrop
   layers:
   - Default
   - TransparentFX
