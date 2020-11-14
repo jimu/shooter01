@@ -30,7 +30,7 @@ public class PlayerFireController : MonoBehaviour
             FireWeapon(weaponMounts[2].weapons[0], weaponMounts[2].transform);
     }
 
-    void FireWeapon(Weapon weapon, Transform transform)
+    void FireWeapon(WeaponData weapon, Transform transform)
     {
         ProjectileLauncher.Launch(weapon.projectile, weapon.fireSFX, transform);
     }

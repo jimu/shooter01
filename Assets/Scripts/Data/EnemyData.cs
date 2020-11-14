@@ -8,11 +8,14 @@ public class EnemyData : ScriptableObject
     [Tooltip("Enemy name")]
     new public string name;
 
+    [Tooltip("Enemy label appears on prefab")]
+    new public string label;
+
     [Tooltip("Prefab used to instantiate this enemy")]
     public GameObject prefab;
 
     [Tooltip("Projectile this enemy fires")]
-    public Projectile projectile;
+    public ProjectileData projectile;
 
     [Tooltip("Chance to fire per second")]
     public float fireChance;

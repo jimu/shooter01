@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Alessandro
   m_EditorClassIdentifier: 
   name: Alessandro (Bomber)
+  label: BOMBER
   prefab: {fileID: 3754374583293547972, guid: b876276d1df148e43b5793a70fa0adfe, type: 3}
   projectile: {fileID: 11400000, guid: 298fa1c5b173ac242881923693793912, type: 2}
   fireChance: 0.2

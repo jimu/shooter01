@@ -5,11 +5,11 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
 
-    [HideInInspector] public Projectile projectile;
+    [HideInInspector] public ProjectileData projectile;
     int remainingTargets;
 
 
-    public void SetProjectile(Projectile projectile)
+    public void SetProjectile(ProjectileData projectile)
     {
         this.projectile = projectile;
         remainingTargets = projectile.maxTargetsHit;

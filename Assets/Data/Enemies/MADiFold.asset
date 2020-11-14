@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MADiFold
   m_EditorClassIdentifier: 
   name: MADiFold (Tank)
+  label: TANK
   prefab: {fileID: 3754374583293547972, guid: b876276d1df148e43b5793a70fa0adfe, type: 3}
   projectile: {fileID: 11400000, guid: 1fdd4e30b505a3641846cda0be29a916, type: 2}
   fireChance: 0.5

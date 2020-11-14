@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Projectile", menuName = "Shooter/Projectile")]
-public class Projectile : ScriptableObject
+public class ProjectileData : ScriptableObject
 {
     [Tooltip("Projectile description")]
     public string descripton;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Shooter/Weapon")]
-public class Weapon : ScriptableObject
+public class WeaponData : ScriptableObject
 {
     [Tooltip("Weapon name")]
     new public string name;
@@ -12,7 +12,7 @@ public class Weapon : ScriptableObject
     public GameObject prefab;
 
     [Tooltip("Projectile that this weapon fires")]
-    public Projectile projectile;
+    public ProjectileData projectile;
 
     [Tooltip("Rounds per second")]
     public float fireRate;
@@ -24,7 +24,7 @@ public class Weapon : ScriptableObject
     public AudioClip fireSFX;
 
     [Tooltip("Upgrades to this weapon")]
-    public Weapon upgrade;
+    public WeaponData upgrade;
 
     [Tooltip("Cost to upgrade this weapon")]
     public int upgradeCost;

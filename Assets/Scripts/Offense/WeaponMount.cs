@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class WeaponMount : MonoBehaviour
 {
-    public List<Weapon> weapons;
+    public List<WeaponData> weapons;
 }

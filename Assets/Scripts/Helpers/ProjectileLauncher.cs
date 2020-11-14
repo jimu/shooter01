@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileLauncher
 {
-    static public GameObject Launch(Projectile projectile, AudioClip sfx, Transform transform)
+    static public GameObject Launch(ProjectileData projectile, AudioClip sfx, Transform transform)
     {
         AudioManager.Instance.PlayOneShot(sfx);
         GameObject o = PoolManager.Instance.Get(projectile.prefab, transform);

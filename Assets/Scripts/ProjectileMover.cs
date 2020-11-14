@@ -8,11 +8,11 @@ using UnityEngine;
  */
 public class ProjectileMover : MonoBehaviour
 {
-    /*[HideInInspector] */public Projectile projectile;
+    /*[HideInInspector] */public ProjectileData projectile;
 
     float expireTime;
 
-    public void SetProjectile(Projectile projectile)
+    public void SetProjectile(ProjectileData projectile)
     {
         this.projectile = projectile;
         expireTime = Time.time + projectile.range / projectile.speed;

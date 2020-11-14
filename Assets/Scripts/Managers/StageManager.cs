@@ -23,7 +23,9 @@ public class StageManager : MonoBehaviour
 
         while (Time.time > nextWave && nextWave < data.waveSchedule.Length)
         {   if (data.waveSchedule[nextWave] != null)
+            {
                 Instantiate(data.waveSchedule[nextWave]);
+            }
             nextWave++;
         }
     }

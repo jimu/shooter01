@@ -23,7 +23,6 @@ public class PlayerCollision : MonoBehaviour
                 break;
             default:
                 return;
-                break;
         }
         other.gameObject.SetActive(false);
 

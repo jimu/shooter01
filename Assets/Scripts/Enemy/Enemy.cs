@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // manages enemy data and initializes other enemy components
 public class Enemy : MonoBehaviour
 {
     public EnemyData data;
+    [SerializeField] TextMeshPro text;
+
     HealthController health;
 
     void OnEnable()
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log($"{name}: {data}");
         this.data = data;
         health.Init(data.health, data.hurtSFX, data.hurtVFX, data.destroyedSFX, data.destroyedVFX);
+        text.text = data.label;
 
         GetComponent<EnemyRandomAttack>()?.SetData(data);
     }
