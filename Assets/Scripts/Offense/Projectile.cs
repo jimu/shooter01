@@ -6,16 +6,19 @@ using UnityEngine;
 public class Projectile : ScriptableObject
 {
     [Tooltip("Projectile description")]
-    new public string descripton;
+    public string descripton;
 
-    [Tooltip("Pool used to instantiate this weapon")]
-    public Pool pool;
+    [Tooltip("Pool used to instantiate projectiles")]
+    public GameObject prefab;
 
     [Tooltip("Damage")]
     public float damage;
 
     [Tooltip("Projectile Speed")]
     public float speed;
+
+    [Tooltip("Projectile Range")]
+    public float range;
 
     [Tooltip("Particle Effect when hit target")]
     public ParticleSystem impactVFX;

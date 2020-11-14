@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gun Level 1
   pool: 0
+  prefab: {fileID: 4874765466974331788, guid: f29be37056a1227459ec36951716066c, type: 3}
   projectile: {fileID: 11400000, guid: 76c3d055378396d4dbdc8a9ef4237ab6, type: 2}
   fireRate: 1
   dischargeVFX: {fileID: 0}

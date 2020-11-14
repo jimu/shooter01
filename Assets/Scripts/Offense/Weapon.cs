@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Pool { ShellProjectile, LaserProjectile, MissileProjectile, Enemy, EnemyProjectile }
+public enum PoolType { ShellProjectile, LaserProjectile, MissileProjectile, Enemy, EnemyProjectile }
 
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Shooter/Weapon")]
 public class Weapon : ScriptableObject
@@ -10,8 +10,8 @@ public class Weapon : ScriptableObject
     [Tooltip("Weapon name")]
     new public string name;
 
-    [Tooltip("Pool used to instantiate this weapon")]
-    public Pool pool;
+    [Tooltip("Prefab used to instantiate this weapon")]
+    public GameObject prefab;
 
     [Tooltip("Projectile this weapon fires")]
     public Projectile projectile;

@@ -14,8 +14,6 @@ public class RepeatingBackground : MonoBehaviour
     [Tooltip("Units/second image moves down")]
     [SerializeField] float verticalSpeed;
 
-
-
     public Vector3 translation;
     float offsetY;
     float offsetLimitY;

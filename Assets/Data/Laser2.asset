@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Laser Level 2
   pool: 1
+  prefab: {fileID: 4874765466974331788, guid: 4293de6ea7b5b6c4786f6ee46ee44be7, type: 3}
   projectile: {fileID: 11400000, guid: 7ed8eaa7dc7979640bc3f511ed94f308, type: 2}
   fireRate: 1.8
   dischargeVFX: {fileID: 0}

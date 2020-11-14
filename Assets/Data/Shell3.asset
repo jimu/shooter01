@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Shell3
   m_EditorClassIdentifier: 
   descripton: Shell Level 3
-  pool: 0
+  prefab: {fileID: 4979977607434111679, guid: 40da5dcb4ce47724f97d9db8e2707ba2, type: 3}
   damage: 3
   speed: 1.4
+  range: 16
   impactVFX: {fileID: 0}

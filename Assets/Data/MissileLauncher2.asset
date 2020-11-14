@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MissileLauncher2
   m_EditorClassIdentifier: 
   name: Doomcaster
-  pool: 2
-  projectile: {fileID: 11400000, guid: 76c3d055378396d4dbdc8a9ef4237ab6, type: 2}
+  prefab: {fileID: 4874765466974331788, guid: e36c06919c984a04ba01b77b9689420c, type: 3}
+  projectile: {fileID: 11400000, guid: 0ba5e94e3bd2a7047a28516bd4514cf7, type: 2}
   fireRate: 1
   dischargeVFX: {fileID: 0}
   upgrade: {fileID: 0}

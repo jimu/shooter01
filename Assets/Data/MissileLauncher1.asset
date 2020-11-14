@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MissileLauncher1
   m_EditorClassIdentifier: 
   name: Missile Launcher
-  pool: 2
-  projectile: {fileID: 11400000, guid: 76c3d055378396d4dbdc8a9ef4237ab6, type: 2}
+  prefab: {fileID: 4874765466974331788, guid: e36c06919c984a04ba01b77b9689420c, type: 3}
+  projectile: {fileID: 11400000, guid: e981f37d77908194eab60ae3ea1a9c3a, type: 2}
   fireRate: 1
   dischargeVFX: {fileID: 0}
   upgrade: {fileID: 11400000, guid: 6ab37d1683f3db84d94961980dfdbe77, type: 2}

@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
                 Lose();
             if (Input.GetKeyDown(KeyCode.Alpha4))
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().TogglePerspective();
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+                GetComponent<EnemyPoolManager>().Get(new Vector3(1, 0, 0));
         }
     }
 
@@ -123,6 +125,8 @@ public class GameManager : MonoBehaviour
         winMenu.SetActive(state == GameState.Win);
         loseMenu.SetActive(state == GameState.Lose);
         hud.SetActive(state == GameState.Play);
+
+        Time.timeScale = state == GameState.Play ? 1f : 0f;
     }
 
 

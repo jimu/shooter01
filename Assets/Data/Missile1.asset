@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Missile1
   m_EditorClassIdentifier: 
   descripton: Standard Missile
-  pool: 2
+  prefab: {fileID: 4979977607434111679, guid: fb9090b9cffb2f943b9d1b4fa12de6ae, type: 3}
   damage: 3
   speed: 1
+  range: 10
   impactVFX: {fileID: 0}
