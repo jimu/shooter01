@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     public Waypoints path;
-    public float lastFraction;
     public float startTime;
     public Enemy enemy;
     public int currentLeg;
@@ -16,11 +15,11 @@ public class EnemyMover : MonoBehaviour
         enemy = GetComponent<Enemy>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void SetPath(Waypoints path)
     {
+        this.path = path;
         transform.position = path.waypoints[0];
-        lastFraction = 0f;
         startTime = Time.time;
         currentLeg = 0;
         currentLegStartDistance = 0;
@@ -29,10 +28,17 @@ public class EnemyMover : MonoBehaviour
 
     void Update()
     {
-        float distance = ((Time.time - startTime) * enemy.data.speed) % path.totalDistance;
+        float distance = (Time.time - startTime) * enemy.data.speed;
 
-        if (distance < currentLegStartDistance )
+        while (distance > path.totalDistance)
         {
+            if (!path.loop)
+            {
+                gameObject.SetActive(false);
+                return;
+            }
+            startTime += path.totalDistance / enemy.data.speed;
+            distance -= path.totalDistance;
             currentLeg = 0;
             currentLegStartDistance = 0;
         }

@@ -19,13 +19,12 @@ public class EnemyWave : MonoBehaviour
     {
         while (numEnemy > 0)
         {
+            yield return new WaitForSeconds(interval);
             GameObject o = PoolManager.Instance.Get(enemy.prefab, path.waypoints[0]);
             o.GetComponent<Enemy>().SetData(enemy);
-            o.GetComponent<EnemyMover>().path = path;
-
-            if (--numEnemy > 0)
-                yield return new WaitForSeconds(interval);
+            o.GetComponent<EnemyMover>().SetPath(path);
+            numEnemy--;
         }
-        Destroy(gameObject);
+
     }
 }
