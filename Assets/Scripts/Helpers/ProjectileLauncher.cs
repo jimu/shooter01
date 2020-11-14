@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ProjectileLauncher
 {
-    static public GameObject Launch(Projectile projectile, Transform source)
+    static public GameObject Launch(Projectile projectile, Transform transform)
     {
-        GameObject o = PoolManager2.Instance.Get(projectile.prefab, source);
+        GameObject o = PoolManager.Instance.Get(projectile.prefab, transform);
         o.GetComponent<ProjectileMover>().SetProjectile(projectile);
         o.GetComponent<Damager>().SetProjectile(projectile);
         return o;

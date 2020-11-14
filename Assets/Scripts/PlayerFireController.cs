@@ -8,16 +8,10 @@ public class PlayerFireController : MonoBehaviour
     
     public Weapon weaponAlternate1;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("PlayerFireController.Start");
         foreach(WeaponMount mount in weaponMounts)
-        {
-            Debug.Log($" * {mount} weapon {mount.weapons[0]} pos {mount.transform.position}");
-            //Instantiate(mount.weapons[0u].prefab, mount.transform);
             SetWeapon(mount);
-        }
     }
 
     void SetWeapon(WeaponMount mount, GameObject prefab = null)
@@ -27,7 +21,6 @@ public class PlayerFireController : MonoBehaviour
         Instantiate(prefab == null ? mount.weapons[0].prefab : prefab, mount.transform);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))

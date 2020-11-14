@@ -17,6 +17,9 @@ public class EnemyData : ScriptableObject
     [Tooltip("Chance to fire per second")]
     public float fireChance;
 
+    [Tooltip("Weapon cooldown time in seconds")]
+    public float cooldown;
+
     [Tooltip("Particle effect when firing")]
     public ParticleSystem dischargeVFX;
 

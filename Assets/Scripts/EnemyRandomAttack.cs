@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRandomWeaponFire : MonoBehaviour
+public class EnemyRandomAttack : MonoBehaviour
 {
     EnemyData data;
     float cooldownExpires = 0f;
 
     private void OnEnable()
     {
-        cooldownExpires = Time.time + 0.5f;    
+        ResetCooldown();
     }
 
     public void SetData(EnemyData data)
     {
         this.data = data;
+        ResetCooldown();
+    }
+
+    void ResetCooldown()
+    {
+        cooldownExpires = Time.time + 0.5f;
     }
 
     private void Update()

@@ -62,11 +62,11 @@ public class GameManager : MonoSingleton<GameManager>
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>().TogglePerspective();
             if (Input.GetKeyDown(KeyCode.Alpha5))
             {
-                GameObject e = GetComponent<EnemyPoolManager>().Get(new Vector3(1, 0, 0));
-                e.GetComponent<Enemy>().SetData(debugEnemy);
+                GameObject enemy = PoolManager.Instance.Get(debugEnemy.prefab, new Vector3(1, 0, 0));
+                enemy.GetComponent<Enemy>().SetData(debugEnemy);
             }
             if (Input.GetKeyDown(KeyCode.Alpha6))
-                GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Damage(10);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Damage(1);
             if (Input.GetKeyDown(KeyCode.Alpha7))
                 foreach (GameObject e in GameObject.FindGameObjectsWithTag("Enemy")) {
                     e.GetComponent<HealthController>().Damage(1);
@@ -106,7 +106,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void SetState( GameState state)
     {
-        Debug.Log($"SetState({state})");
+        //Debug.Log($"SetState({state})");
         this.state = state;
 
         if (state == GameState.Init)

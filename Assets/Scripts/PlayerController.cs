@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     }
     void CheckForDeath(float normalizedHealth)
     {
-        Debug.Log($"CheckForDeath({normalizedHealth}");
         if (normalizedHealth <= 0f)
         {
             GameManager.Instance.Lose();
