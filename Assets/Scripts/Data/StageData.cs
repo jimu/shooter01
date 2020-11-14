@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class StageData : ScriptableObject
     [Tooltip("Danger Prefab")]
     public GameObject dangerDropPrefab;
 
-    [Tooltip("Frequency of brakeable obstacles per second")]
+    [Tooltip("Frequency of breakable obstacles per second")]
     public float breakableDropsPerSecond;
 
     [Tooltip("Breakable Prefab")]
@@ -29,6 +30,9 @@ public class StageData : ScriptableObject
     [Tooltip("Upgrade Drop Prefab")]
     public GameObject upgradeDropPrefab;
 
-
-
+    [Header("Schedule waves to start for second. Leave empty for no wave at that second")]
+    public EnemyWave[] waveSchedule;
 }
+
+
+

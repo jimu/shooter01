@@ -6,6 +6,7 @@ using UnityEngine;
 public class StageManager : MonoBehaviour
 {
     public StageData data;
+    public int nextWave = 0;
 
     public void Update()
     {   if (Time.timeScale > 0)
@@ -18,6 +19,12 @@ public class StageManager : MonoBehaviour
                 Drop(data.upgradeDropPrefab);
             if (Random.value / Time.deltaTime < data.breakableDropsPerSecond)
                 Drop(data.breakableDropPrefab);
+        }
+
+        while (Time.time > nextWave && nextWave < data.waveSchedule.Length)
+        {   if (data.waveSchedule[nextWave] != null)
+                Instantiate(data.waveSchedule[nextWave]);
+            nextWave++;
         }
     }
 
