@@ -12,5 +12,10 @@ public class PlayerCollision : MonoBehaviour
             GetComponent<HealthController>().Damage(99);
             other.gameObject.SetActive(false); // TODO Kill enemy on collision?  Score? Allow to survive?
         }
+        if (other.CompareTag("Drop"))
+        {
+            GetComponent<HealthController>().Damage(99);
+            other.gameObject.SetActive(false); // TODO Kill enemy on collision?  Score? Allow to survive?
+        }
     }
 }

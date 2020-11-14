@@ -26,6 +26,8 @@ public class GameManager : MonoSingleton<GameManager>
     [HideInInspector] public AudioSource uiAudioSource;
     [SerializeField] EnemyData debugEnemy;
 
+    [HideInInspector] public float minX, minY, maxX, maxY;
+
     int score = 0;
 
     GameState state;
@@ -146,6 +148,15 @@ public class GameManager : MonoSingleton<GameManager>
 
         if (lives < 1)
             GameManager.Instance.Lose();
-
     }
+
+    public void SetExtents(float minX, float minY, float maxX, float maxY)
+    {
+        this.minX = minX;
+        this.minY = minY;
+        this.maxX = maxX;
+        this.maxY = maxY;
+    }
+
+
 }

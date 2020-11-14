@@ -12,7 +12,6 @@ public class PlayerMovementController : MonoBehaviour
 
     public bool movingEnabled = true;
     private float minX, maxX, minY, maxY;
-    public bool mouseButton;
     public PlayerData data;
 
     public void Awake()
@@ -28,6 +27,8 @@ public class PlayerMovementController : MonoBehaviour
             SetMarginsOrthographicCamera();
         else
             SetMarginsPerspectiveCamera();
+
+        GameManager.Instance.SetExtents(minX, minY, maxX, maxY);
     }
 
 
@@ -114,7 +115,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Update()
     {
-        mouseButton = Input.GetMouseButton(0);
 
         if (movingEnabled)
         {

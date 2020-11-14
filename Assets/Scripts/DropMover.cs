@@ -8,28 +8,24 @@ using UnityEngine;
 
 #pragma warning disable 0649
 
-[RequireComponent(typeof(MeshCollider))]
-public class RepeatingBackground : MonoBehaviour
+[RequireComponent(typeof(BoxCollider))]
+public class DropMover : MonoBehaviour
 {
     [Tooltip("Units/second image moves down")]
     [SerializeField] float verticalSpeed;
+    float minY;
 
-    float offsetY;
-    float offsetLimitY;
-
-    void Awake()
+    private void Awake()
     {
-        Vector3 pos = transform.position;
-        offsetY = GetComponent<MeshCollider>().bounds.size.y;
-        offsetLimitY = pos.y - offsetY;
+        minY = GameManager.Instance.minY - GetComponent<BoxCollider>().size.y;
     }
 
     void Update()
     {
         Vector3 pos = transform.position;
         pos.y -= verticalSpeed * Time.deltaTime;
-        if (pos.y < offsetLimitY)
-            pos.y += offsetY;
+        if (pos.y < minY)
+            gameObject.SetActive(false);
         transform.position = pos;
     }
 }

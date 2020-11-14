@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 122607765}
   - component: {fileID: 122607766}
   - component: {fileID: 122607768}
+  - component: {fileID: 122607767}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -778,6 +779,23 @@ MonoBehaviour:
   sfxScore: {fileID: 8300000, guid: 09186a35be341df419ba92f27eca6856, type: 3}
   uiAudioSource: {fileID: 1943983893}
   debugEnemy: {fileID: 11400000, guid: e7480b6696ed82144868984ae41315da, type: 2}
+  minX: 0
+  minY: 0
+  maxX: 0
+  maxY: 0
+--- !u!114 &122607767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122607764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53296653627bda64c9560e1f15a65066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7a886f3a16a17da4fa4c5109d8ecd693, type: 2}
 --- !u!114 &122607768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,7 +1895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingEnabled: 1
-  mouseButton: 0
   data: {fileID: 0}
 --- !u!114 &306726053
 MonoBehaviour:
@@ -1910,6 +1927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   health: 0
+  inactivateOnZeroHealth: 0
 --- !u!65 &306726055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4188,7 +4206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalSpeed: 1
-  translation: {x: 0, y: 0, z: 0}
 --- !u!64 &618729685
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8759,7 +8776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1666071308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9124,7 +9141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1740488965
 MonoBehaviour:
   m_ObjectHideFlags: 0

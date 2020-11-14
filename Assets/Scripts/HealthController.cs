@@ -8,6 +8,7 @@ public class HealthController : MonoDamagable
     [SerializeField] private int maxHealth = 100;
     
     [SerializeField] private int health;
+    [SerializeField] bool inactivateOnZeroHealth = false;
     private AudioClip hurtSFX;
     private ParticleSystem hurtVFX;
     private AudioClip deathSFX;
@@ -36,8 +37,12 @@ public class HealthController : MonoDamagable
         if (health <= 0)
         {
             AudioManager.Instance.PlayOneShot(deathSFX);
+            
             if (deathVFX)
                 Debug.Log("TODO deathVFX");
+            
+            if (inactivateOnZeroHealth)
+                gameObject.SetActive(false);
         }
         else if (hits > 0)
         {
