@@ -33,18 +33,10 @@ public class PlayerFireController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
             SetWeapon(weaponMounts[0], weaponAlternate1.prefab);
         if (Input.GetKeyDown(KeyCode.F))
-            LaunchProjectile(weaponMounts[0].weapons[0].projectile, weaponMounts[0].transform);
+            ProjectileLauncher.Launch(weaponMounts[0].weapons[0].projectile, weaponMounts[0].transform);
         if (Input.GetKeyDown(KeyCode.G))
-            LaunchProjectile(weaponMounts[1].weapons[0].projectile, weaponMounts[1].transform);
+            ProjectileLauncher.Launch(weaponMounts[1].weapons[0].projectile, weaponMounts[1].transform);
         if (Input.GetKeyDown(KeyCode.H))
-            LaunchProjectile(weaponMounts[2].weapons[0].projectile, weaponMounts[2].transform);
-
-    }
-
-    void LaunchProjectile(Projectile projectile, Transform source)
-    {
-        GameObject o = PoolManager2.Instance.Get(projectile.prefab, source);
-        o.GetComponent<ProjectileMover>().SetProjectile(projectile);
-        o.GetComponent<Damager>().SetProjectile(projectile);
+            ProjectileLauncher.Launch(weaponMounts[2].weapons[0].projectile, weaponMounts[2].transform);
     }
 }

@@ -17,5 +17,6 @@ MonoBehaviour:
   damage: 1
   speed: 3
   range: 4
+  maxTargetsHit: 2
   impactVFX: {fileID: 0}
   damagesTag: Enemy

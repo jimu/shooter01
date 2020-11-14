@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
         Debug.Log($"{name}: {data}");
         this.data = data;
         health.SetMaxHealth(data.health);
+
+        GetComponent<EnemyRandomWeaponFire>()?.SetData(data);
     }
 
     // Update is called once per frame

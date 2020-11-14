@@ -20,6 +20,9 @@ public class Projectile : ScriptableObject
     [Tooltip("Projectile Range")]
     public float range;
 
+    [Tooltip("Maximum number of targets hit")]
+    public int maxTargetsHit = 1;
+
     [Tooltip("Particle Effect when hit target")]
     public ParticleSystem impactVFX;
 

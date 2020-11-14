@@ -6,7 +6,8 @@ using UnityEngine;
 public class HealthController : MonoDamagable
 {
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int health;
+    
+    private int health;
 
     Action<float> onHealthChanged;
 
@@ -45,11 +46,4 @@ public class HealthController : MonoDamagable
         this.maxHealth = maxHealth;
         SetHealth(maxHealth);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"{name} collieded with {other.name}");
-    }
-
-
 }

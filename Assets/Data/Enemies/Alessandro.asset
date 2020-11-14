@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Alessandro (Bomber)
   prefab: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 11400000, guid: 298fa1c5b173ac242881923693793912, type: 2}
   fireChance: 0.2
   dischargeVFX: {fileID: 0}
   health: 20

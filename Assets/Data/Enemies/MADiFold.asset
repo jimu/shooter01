@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: MADiFold (Tank)
   prefab: {fileID: 0}
-  projectile: {fileID: 0}
-  fireChance: 0.2
+  projectile: {fileID: 11400000, guid: 1fdd4e30b505a3641846cda0be29a916, type: 2}
+  fireChance: 0.5
   dischargeVFX: {fileID: 0}
   health: 50
   speed: 1

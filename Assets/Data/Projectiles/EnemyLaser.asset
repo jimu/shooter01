@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ed1d9f488dd3234fae690d83ce1517c, type: 3}
-  m_Name: LaserBeam2
+  m_Name: EnemyLaser
   m_EditorClassIdentifier: 
-  descripton: Laser Beam Level 2
-  prefab: {fileID: 4979977607434111679, guid: d79e87e38c2588e40876591b9d3bcfc7, type: 3}
-  damage: 2
-  speed: 5
-  range: 5
-  maxTargetsHit: 6
+  descripton: PengLaser
+  prefab: {fileID: 4979977607434111679, guid: fb4c32431a3aecc4eb2596e0e6618caa, type: 3}
+  damage: 1
+  speed: 20
+  range: 20
   impactVFX: {fileID: 0}
-  damagesTag: Enemy
+  damagesTag: Player

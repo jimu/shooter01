@@ -36,6 +36,15 @@ public class MenuInputManager : MonoBehaviour
         }
     }
 
+    public void OnRestart()
+    {
+        if (cancelState != GameState.Null)
+        {
+            GameManager.Instance.UIPlayClick();
+            GameManager.Instance.Restart();
+        }
+    }
+
     public void SetContent(string text)
     {
         content?.SetText(text);

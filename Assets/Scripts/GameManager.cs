@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 #pragma warning disable 0649
 
@@ -60,7 +59,7 @@ public class GameManager : MonoSingleton<GameManager>
             if (Input.GetKeyDown(KeyCode.Alpha3))
                 Lose();
             if (Input.GetKeyDown(KeyCode.Alpha4))
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().TogglePerspective();
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>().TogglePerspective();
             if (Input.GetKeyDown(KeyCode.Alpha5))
             {
                 GameObject e = GetComponent<EnemyPoolManager>().Get(new Vector3(1, 0, 0));
@@ -94,16 +93,10 @@ public class GameManager : MonoSingleton<GameManager>
         UIPlayOneShot(sfxClick);
     }
 
-    void OnOkayPressed()
+    public void Restart()
     {
-        UIPlayClick();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    void OnCancelPressed()
-    {
-        UIPlayClick();
-    }
-
 
     void OnEscapePressed()
     {

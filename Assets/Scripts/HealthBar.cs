@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 #pragma warning disable 0649
 
+
+/**
+ * Implements a gradient colored health bar for enemies and the player
+ */
+
 public class HealthBar : MonoBehaviour
 {
     public Gradient gradient;

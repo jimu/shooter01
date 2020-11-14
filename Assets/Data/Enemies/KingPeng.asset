@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: KingPeng (Boss)
   prefab: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 11400000, guid: 7c15f28c3259140499fdeee4bf183893, type: 2}
   fireChance: 0.9
   dischargeVFX: {fileID: 0}
   health: 100
