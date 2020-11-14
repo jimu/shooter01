@@ -18,7 +18,10 @@ public class Weapon : ScriptableObject
     public float fireRate;
 
     [Tooltip("Particle Effect when fired")]
-    public ParticleSystem dischargeVFX;
+    public ParticleSystem fireVFX;
+
+    [Tooltip("Sound Effect when fired")]
+    public AudioClip fireSFX;
 
     [Tooltip("Upgrades to this weapon")]
     public Weapon upgrade;

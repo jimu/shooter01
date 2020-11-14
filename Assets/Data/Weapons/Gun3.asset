@@ -16,6 +16,7 @@ MonoBehaviour:
   prefab: {fileID: 4874765466974331788, guid: f29be37056a1227459ec36951716066c, type: 3}
   projectile: {fileID: 11400000, guid: 75e8e63faeafda641b6354aa41dd4a75, type: 2}
   fireRate: 1.8
-  dischargeVFX: {fileID: 0}
+  fireVFX: {fileID: 0}
+  fireSFX: {fileID: 8300000, guid: 0dcf1aa2d3536e147a776f5f2f44b007, type: 3}
   upgrade: {fileID: 0}
   upgradeCost: 0

@@ -17,9 +17,12 @@ MonoBehaviour:
   projectile: {fileID: 11400000, guid: 1fdd4e30b505a3641846cda0be29a916, type: 2}
   fireChance: 0.5
   cooldown: 0.2
-  dischargeVFX: {fileID: 0}
+  fireSFX: {fileID: 8300000, guid: ce37a2c1a5f86fe46aca570043c12b89, type: 3}
+  fireVFX: {fileID: 0}
   health: 50
   speed: 1
   score: 1
+  hurtSFX: {fileID: 8300000, guid: 4a7493fd2ce18b54fb30e1e404237e0e, type: 3}
+  hurtVFX: {fileID: 0}
+  destroyedSFX: {fileID: 8300000, guid: 9a9ddcb6f3094e744ba103cdcbe7d820, type: 3}
   destroyedVFX: {fileID: 0}
-  destroyedSFX: {fileID: 0}

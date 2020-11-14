@@ -15,7 +15,8 @@ MonoBehaviour:
   descripton: PengLaser
   prefab: {fileID: 4979977607434111679, guid: fb4c32431a3aecc4eb2596e0e6618caa, type: 3}
   damage: 1
-  speed: 20
+  speed: 15
   range: 20
+  maxTargetsHit: 1
   impactVFX: {fileID: 0}
   damagesTag: Player

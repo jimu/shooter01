@@ -15,7 +15,7 @@ MonoBehaviour:
   descripton: Laser Beam Level 1
   prefab: {fileID: 4979977607434111679, guid: d79e87e38c2588e40876591b9d3bcfc7, type: 3}
   damage: 1
-  speed: 3
+  speed: 5
   range: 4
   maxTargetsHit: 2
   impactVFX: {fileID: 0}

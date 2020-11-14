@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log($"{name}: {data}");
         this.data = data;
-        health.SetMaxHealth(data.health);
+        health.Init(data.health, data.hurtSFX, data.hurtVFX, data.destroyedSFX, data.destroyedVFX);
 
         GetComponent<EnemyRandomAttack>()?.SetData(data);
     }

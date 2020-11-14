@@ -8,6 +8,10 @@ public class HealthController : MonoDamagable
     [SerializeField] private int maxHealth = 100;
     
     private int health;
+    private AudioClip hurtSFX;
+    private ParticleSystem hurtVFX;
+    private AudioClip deathSFX;
+    private ParticleSystem deathVFX;
 
     Action<float> onHealthChanged;
 
@@ -28,6 +32,18 @@ public class HealthController : MonoDamagable
 
     public override void Damage(int hits)
     {
+        if (hits > health)
+        {
+            AudioManager.Instance.PlayOneShot(deathSFX);
+            if (deathVFX)
+                Debug.Log("TODO deathVFX");
+        }
+        else if (hits > 0)
+        {
+            AudioManager.Instance.PlayOneShot(hurtSFX);
+            if (deathVFX)
+                Debug.Log("TODO hurtVFX");
+        }
         SetHealth(health - hits);
     }
 
@@ -40,8 +56,17 @@ public class HealthController : MonoDamagable
             onHealthChanged?.Invoke((health * 1f) / maxHealth);
         }
     }
+    public void Init(int maxHealth, AudioClip hurtSFX, ParticleSystem hurtVFX, AudioClip deathSFX, ParticleSystem deathVFX)
+    {
+        SetMaxHealth(maxHealth);
+        this.hurtSFX = hurtSFX;
+        this.hurtVFX = hurtVFX;
+        this.deathSFX = deathSFX;
+        this.deathVFX = deathVFX;
+    }
 
-    public void SetMaxHealth(int maxHealth)
+
+    private void SetMaxHealth(int maxHealth)
     {
         this.maxHealth = maxHealth;
         SetHealth(maxHealth);

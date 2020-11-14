@@ -16,6 +16,7 @@ public class GameManager : MonoSingleton<GameManager>
     public GameObject hud;
     public GameObject debugPanel;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
 
     [Header("Sound Effects")]
     public AudioClip sfxClick;
@@ -136,5 +137,15 @@ public class GameManager : MonoSingleton<GameManager>
     {
         score = value;
         scoreText.SetText(value.ToString());
+    }
+
+
+    public void SetLives(int lives)
+    {
+        livesText.SetText(lives.ToString());
+
+        if (lives < 1)
+            GameManager.Instance.Lose();
+
     }
 }

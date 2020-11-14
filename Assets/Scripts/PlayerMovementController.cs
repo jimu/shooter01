@@ -1,22 +1,22 @@
-﻿
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class PlayerMovementController : MonoBehaviour
 {
     [Tooltip("Speed of player ship")]
-    public float speed = 30f;
+    private float speed;
 
     public bool movingEnabled = true;
     private float minX, maxX, minY, maxY;
     public bool mouseButton;
+    public PlayerData data;
 
     public void Awake()
     {
         SetMargins();
+        speed = GetComponent<PlayerController>().data.speed;
+        Teleport();
     }
 
     private void SetMargins()
@@ -26,6 +26,16 @@ public class PlayerMovementController : MonoBehaviour
         else
             SetMarginsPerspectiveCamera();
     }
+
+
+    public void Teleport(bool fullscreen = false)
+    {
+        float x = Random.Range(minX, maxX);
+        float y = Random.Range(minY, fullscreen ? maxY : 0f); // lower half screen
+
+        transform.position = new Vector3(x, y, 0);
+    }
+
 
     private void SetMarginsPerspectiveCamera()
     {
@@ -96,6 +106,9 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
+
+
+
     private void Update()
     {
         mouseButton = Input.GetMouseButton(0);
@@ -109,6 +122,11 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.touchCount == 1)
                 MoveTowardsScreenPoint(Input.touches[0].position);
 #endif
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                Teleport( fullscreen:true );
+            }
+
         }
     }
 }

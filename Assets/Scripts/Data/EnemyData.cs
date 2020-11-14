@@ -20,8 +20,11 @@ public class EnemyData : ScriptableObject
     [Tooltip("Weapon cooldown time in seconds")]
     public float cooldown;
 
+    [Tooltip("Sound effect when firing")]
+    public AudioClip fireSFX;
+
     [Tooltip("Particle effect when firing")]
-    public ParticleSystem dischargeVFX;
+    public ParticleSystem fireVFX;
 
     [Tooltip("Health of this enemy")]
     public int health;
@@ -32,11 +35,17 @@ public class EnemyData : ScriptableObject
     [Tooltip("Score value of this enemy")]
     public int score;
 
-    [Tooltip("Particle effect when killed")]
-    public ParticleSystem destroyedVFX;
+    [Tooltip("Sound effect when hurt")]
+    public AudioClip hurtSFX;
+
+    [Tooltip("Particle effect when hurt")]
+    public ParticleSystem hurtVFX;
 
     [Tooltip("Sound effect when killed")]
     public AudioClip destroyedSFX;
+
+    [Tooltip("Particle effect when killed")]
+    public ParticleSystem destroyedVFX;
 }
 
 

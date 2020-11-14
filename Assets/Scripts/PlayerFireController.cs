@@ -26,10 +26,15 @@ public class PlayerFireController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
             SetWeapon(weaponMounts[0], weaponAlternate1.prefab);
         if (Input.GetKeyDown(KeyCode.F))
-            ProjectileLauncher.Launch(weaponMounts[0].weapons[0].projectile, weaponMounts[0].transform);
+            FireWeapon(weaponMounts[0].weapons[0], weaponMounts[0].transform);
         if (Input.GetKeyDown(KeyCode.G))
-            ProjectileLauncher.Launch(weaponMounts[1].weapons[0].projectile, weaponMounts[1].transform);
+            FireWeapon(weaponMounts[1].weapons[0], weaponMounts[1].transform);
         if (Input.GetKeyDown(KeyCode.H))
-            ProjectileLauncher.Launch(weaponMounts[2].weapons[0].projectile, weaponMounts[2].transform);
+            FireWeapon(weaponMounts[2].weapons[0], weaponMounts[2].transform);
+    }
+
+    void FireWeapon(Weapon weapon, Transform transform)
+    {
+        ProjectileLauncher.Launch(weapon.projectile, weapon.fireSFX, transform);
     }
 }
