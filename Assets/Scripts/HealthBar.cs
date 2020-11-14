@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+#pragma warning disable 0649
+
 public class HealthBar : MonoBehaviour
 {
     public Gradient gradient;
@@ -10,6 +12,7 @@ public class HealthBar : MonoBehaviour
     private Slider slider;
     private Image fill;
     [SerializeField] MonoDamagable owner;
+
 
     private void OnEnable()
     {

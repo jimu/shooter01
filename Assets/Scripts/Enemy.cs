@@ -37,6 +37,9 @@ public class Enemy : MonoBehaviour
     public void CheckDeath(float normalizedHealth)
     {
         if (normalizedHealth <= 0f)
+        {
             gameObject.SetActive(false);
+            GameManager.Instance.AddScore(data.score);
+        }
     }
 }

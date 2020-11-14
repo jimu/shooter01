@@ -19,3 +19,6 @@ MonoBehaviour:
   dischargeVFX: {fileID: 0}
   health: 100
   speed: 0
+  score: 10
+  destroyedVFX: {fileID: 0}
+  destroyedSFX: {fileID: 0}

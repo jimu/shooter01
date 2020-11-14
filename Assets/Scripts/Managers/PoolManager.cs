@@ -8,7 +8,7 @@ using UnityEngine;
  * Example usage:
  * 
  */
-
+#pragma warning disable 0649
 public class PoolManager : MonoSingleton<PoolManager>
 {
     [SerializeField] GameObject prefab;

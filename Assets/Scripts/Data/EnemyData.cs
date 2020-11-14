@@ -17,7 +17,7 @@ public class EnemyData : ScriptableObject
     [Tooltip("Chance to fire per second")]
     public float fireChance;
 
-    [Tooltip("Particle Effect when firing")]
+    [Tooltip("Particle effect when firing")]
     public ParticleSystem dischargeVFX;
 
     [Tooltip("Health of this enemy")]
@@ -25,6 +25,15 @@ public class EnemyData : ScriptableObject
 
     [Tooltip("Speed of this enemy")]
     public int speed;
+
+    [Tooltip("Score value of this enemy")]
+    public int score;
+
+    [Tooltip("Particle effect when killed")]
+    public ParticleSystem destroyedVFX;
+
+    [Tooltip("Sound effect when killed")]
+    public AudioClip destroyedSFX;
 }
 
 

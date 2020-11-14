@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+#pragma warning disable 0649
 
 public enum GameState { Null = 0, Init, StartMenu, Play, Pause, Help, Win, Lose };
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-    public static GameManager instance;
-
     [Header("UI Panels")]
     public GameObject startMenu;
     public GameObject pauseMenu;
@@ -31,13 +30,7 @@ public class GameManager : MonoBehaviour
 
     GameState state;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        instance = this;
-    }
-
-    private void Start()
+    protected override void Init()
     {
         InitGame();
     }

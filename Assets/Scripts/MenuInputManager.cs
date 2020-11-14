@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-
+#pragma warning disable 0649
 public class MenuInputManager : MonoBehaviour
 {
     [SerializeField] GameState okState = GameState.Null;
@@ -22,8 +22,8 @@ public class MenuInputManager : MonoBehaviour
     {
         if (cancelState != GameState.Null)
         {
-            GameManager.instance.UIPlayClick();
-            GameManager.instance.SetState(cancelState);
+            GameManager.Instance.UIPlayClick();
+            GameManager.Instance.SetState(cancelState);
         }
     }
 
@@ -31,8 +31,8 @@ public class MenuInputManager : MonoBehaviour
     {
         if (cancelState != GameState.Null)
         {
-            GameManager.instance.UIPlayClick();
-            GameManager.instance.SetState(okState);
+            GameManager.Instance.UIPlayClick();
+            GameManager.Instance.SetState(okState);
         }
     }
 

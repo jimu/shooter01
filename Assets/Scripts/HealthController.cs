@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
+// Sets objects health, accepts damage, notifies subscribers of health change
+
 public class HealthController : MonoDamagable
 {
     [SerializeField] private int maxHealth = 100;

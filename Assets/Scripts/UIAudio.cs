@@ -7,7 +7,7 @@ public class UIAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.uiAudioSource = GetComponent<AudioSource>();
+        GameManager.Instance.uiAudioSource = GetComponent<AudioSource>();
     }
 
 }
