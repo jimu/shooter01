@@ -12,7 +12,7 @@ public class Projectile : ScriptableObject
     public GameObject prefab;
 
     [Tooltip("Damage")]
-    public float damage;
+    public int damage;
 
     [Tooltip("Projectile Speed")]
     public float speed;
@@ -22,4 +22,7 @@ public class Projectile : ScriptableObject
 
     [Tooltip("Particle Effect when hit target")]
     public ParticleSystem impactVFX;
+
+    [Tooltip("Damages gameobjects with tag")]
+    public string damagesTag;
 }

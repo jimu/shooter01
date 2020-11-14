@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Gun3
   m_EditorClassIdentifier: 
   name: Gun Level 3
-  pool: 0
   prefab: {fileID: 4874765466974331788, guid: f29be37056a1227459ec36951716066c, type: 3}
   projectile: {fileID: 11400000, guid: 75e8e63faeafda641b6354aa41dd4a75, type: 2}
   fireRate: 1.8

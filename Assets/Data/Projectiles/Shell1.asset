@@ -18,3 +18,4 @@ MonoBehaviour:
   speed: 1
   range: 6
   impactVFX: {fileID: 0}
+  damagesTag: Enemy

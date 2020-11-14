@@ -60,7 +60,7 @@ public class Pool
         return o;
     }
 
-    public GameObject Get(Transform parent)
+    public GameObject Get(Transform newTransform)
     {
         GameObject o;
         //Debug.Log($"pool: {pool}");
@@ -70,13 +70,13 @@ public class Pool
             if (!pool[lastIndex].activeSelf)
             {
                 o = pool[lastIndex];
-                o.transform.position = parent.position;
-                o.transform.rotation = parent.rotation;
+                o.transform.position = newTransform.position;
+                o.transform.rotation = newTransform.rotation;
                 o.SetActive(true);
                 return o;
             }
         }
-        o = GameObject.Instantiate(prefab, parent.position, parent.rotation, parent);
+        o = GameObject.Instantiate(prefab, newTransform.position, newTransform.rotation, parent);
         pool.Add(o);
         return o;
     }

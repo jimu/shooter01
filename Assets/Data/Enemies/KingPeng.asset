@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed1d9f488dd3234fae690d83ce1517c, type: 3}
-  m_Name: Shell3
+  m_Script: {fileID: 11500000, guid: 3e0e0f46b76bd8540ab66b16184e4715, type: 3}
+  m_Name: KingPeng
   m_EditorClassIdentifier: 
-  descripton: Shell Level 3
-  prefab: {fileID: 4979977607434111679, guid: 40da5dcb4ce47724f97d9db8e2707ba2, type: 3}
-  damage: 3
-  speed: 1.4
-  range: 16
-  impactVFX: {fileID: 0}
+  name: KingPeng (Boss)
+  prefab: {fileID: 0}
+  projectile: {fileID: 0}
+  fireChance: 0.9
+  dischargeVFX: {fileID: 0}
+  health: 100
+  speed: 0

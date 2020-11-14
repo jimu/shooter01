@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public AudioClip sfxLose;
     public AudioClip sfxScore;
     [HideInInspector] public AudioSource uiAudioSource;
+    [SerializeField] EnemyData debugEnemy;
 
     int score = 0;
 
@@ -68,7 +69,16 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha4))
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().TogglePerspective();
             if (Input.GetKeyDown(KeyCode.Alpha5))
-                GetComponent<EnemyPoolManager>().Get(new Vector3(1, 0, 0));
+            {
+                GameObject e = GetComponent<EnemyPoolManager>().Get(new Vector3(1, 0, 0));
+                e.GetComponent<Enemy>().SetData(debugEnemy);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha6))
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().Damage(10);
+            if (Input.GetKeyDown(KeyCode.Alpha7))
+                foreach (GameObject e in GameObject.FindGameObjectsWithTag("Enemy")) {
+                    e.GetComponent<HealthController>().Damage(1);
+                }
         }
     }
 

@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76eaaaae2a7e25a4282233e8f1a3cdc5, type: 3}
-  m_Name: Laser2
+  m_Name: Gun1
   m_EditorClassIdentifier: 
-  name: Laser Level 2
-  pool: 1
-  prefab: {fileID: 4874765466974331788, guid: 4293de6ea7b5b6c4786f6ee46ee44be7, type: 3}
-  projectile: {fileID: 11400000, guid: 7ed8eaa7dc7979640bc3f511ed94f308, type: 2}
-  fireRate: 1.8
+  name: Gun Level 1
+  prefab: {fileID: 4874765466974331788, guid: f29be37056a1227459ec36951716066c, type: 3}
+  projectile: {fileID: 11400000, guid: 76c3d055378396d4dbdc8a9ef4237ab6, type: 2}
+  fireRate: 1
   dischargeVFX: {fileID: 0}
-  upgrade: {fileID: 0}
+  upgrade: {fileID: 11400000, guid: a665de74be13c054a93640c9068cec91, type: 2}
   upgradeCost: 100
