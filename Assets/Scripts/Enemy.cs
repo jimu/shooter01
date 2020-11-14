@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// manages enemy data and initializes other enemy components
 public class Enemy : MonoBehaviour
 {
     public EnemyData data;
@@ -24,18 +24,13 @@ public class Enemy : MonoBehaviour
 
     public void SetData(EnemyData data)
     {
-        Debug.Log($"{name}: {data}");
+        //Debug.Log($"{name}: {data}");
         this.data = data;
         health.Init(data.health, data.hurtSFX, data.hurtVFX, data.destroyedSFX, data.destroyedVFX);
 
         GetComponent<EnemyRandomAttack>()?.SetData(data);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void CheckDeath(float normalizedHealth)
     {

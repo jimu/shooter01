@@ -37,8 +37,7 @@ public class PlayerController : MonoBehaviour
             {
                 // TODO randomly appear somewhere else
                 // reset health
-                healthController.SetHealth(data.health);
-
+                healthController.RestoreHealth();
             }
         }
     }

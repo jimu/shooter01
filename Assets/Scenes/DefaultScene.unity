@@ -1838,6 +1838,7 @@ GameObject:
   - component: {fileID: 306726055}
   - component: {fileID: 306726056}
   - component: {fileID: 306726057}
+  - component: {fileID: 306726058}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1908,6 +1909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  health: 0
 --- !u!65 &306726055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1950,6 +1952,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 39ab8bd552956594bbc214279d714f66, type: 2}
+--- !u!114 &306726058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306726050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b587f8193a5d844a8c20976a7022077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &320989805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7680,7 +7694,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Return/Joypad A: Score/Ok
 
-    Escape/Joypad B: Pause/Cancel'
+    Escape/Joypad B: Pause/Cancel
+
+
+    F Fire
+    shell
+
+    G Fire laser
+
+    H Fire missile
+
+    8 Teleport'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9157,7 +9181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 1740488965}
   enemy: {fileID: 11400000, guid: e7480b6696ed82144868984ae41315da, type: 2}
-  numEnemy: 9
+  numEnemy: 12
   interval: 1.2
 --- !u!1 &1752289828
 GameObject:

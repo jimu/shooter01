@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 1
   health: 6
-  speed: 10
+  speed: 4
   hurtSFX: {fileID: 8300000, guid: 4a7493fd2ce18b54fb30e1e404237e0e, type: 3}
   hurtVFX: {fileID: 0}
   destroyedSFX: {fileID: 8300000, guid: 40709991704fb0b41b6898d93ea18890, type: 3}

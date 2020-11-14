@@ -24,6 +24,7 @@ public class HealthBar : MonoBehaviour
         owner.SubscribeHealthChanged(OnHitsChanged);
         slider = GetComponent<Slider>();
         fill = transform.Find("Fill").GetComponent<Image>();
+        OnHitsChanged(owner.GetNormalizedHealth());
     }
 
     private void OnDisable()

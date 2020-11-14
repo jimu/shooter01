@@ -16,4 +16,5 @@ public abstract class MonoDamagable : MonoBehaviour, IDamagable
     abstract public void SubscribeHealthChanged(Action<float> action);
     abstract public void UnsubscribeHealthChanged(Action<float> action);
     abstract public void Damage(int hits);
+    abstract public float GetNormalizedHealth();
 }

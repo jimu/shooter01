@@ -2,6 +2,9 @@
 using Random = UnityEngine.Random;
 
 
+/**
+ * Manages player movement, user movement input, and teleporting
+ */
 public class PlayerMovementController : MonoBehaviour
 {
     [Tooltip("Speed of player ship")]
