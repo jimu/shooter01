@@ -10,10 +10,9 @@ public class PlayerMovementController : MonoBehaviour
     [Tooltip("Speed of player ship")]
     public float speed = 30f;
 
-    bool movingEnabled = true;
+    public bool movingEnabled = true;
     private float minX, maxX, minY, maxY;
-
-
+    public bool mouseButton;
 
     public void Awake()
     {
@@ -72,6 +71,7 @@ public class PlayerMovementController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, pos, speed * Time.deltaTime);
     }
 
+
     private void MoveTowardsScreenPoint(Vector3 pos)
     {
         if (Camera.main.orthographic)
@@ -80,24 +80,32 @@ public class PlayerMovementController : MonoBehaviour
         }
         else
         {
+            // TODO: Bug - Physics.Raycast returns FALSE after 30+ seconds of continuous movement (leak?)
+            // starts working again after a few seconds of no movement
+            // Workaround: just use orthographic camera. it works fine
             Ray ray = Camera.main.ScreenPointToRay(pos);
             RaycastHit hitData;
-            if (Physics.Raycast(ray, out hitData, 1000))
+            if (Physics.Raycast(ray, out hitData, 2000))
             {
                 MoveTowards(hitData.point);
+            }
+            else
+            {
+                Debug.Log("Raycast FAILED");
             }
         }
     }
 
     private void Update()
     {
+        mouseButton = Input.GetMouseButton(0);
+
         if (movingEnabled)
         {
 #if UNITY_STANDALONE || UNITY_EDITOR || UNITY_WEBGL
             if (Input.GetMouseButton(0)) //if mouse button was pressed       
                 MoveTowardsScreenPoint(Input.mousePosition);
-#endif
-#if UNITY_IOS || UNITY_ANDROID
+#elif UNITY_IOS || UNITY_ANDROID
             if (Input.touchCount == 1)
                 MoveTowardsScreenPoint(Input.touches[0].position);
 #endif
