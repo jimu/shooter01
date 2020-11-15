@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+#pragma warning disable 649
+
 // manages enemy data and initializes other enemy components
 public class Enemy : MonoBehaviour
 {

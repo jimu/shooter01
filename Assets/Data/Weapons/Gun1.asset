@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Gun Level 1
   prefab: {fileID: 4874765466974331788, guid: f29be37056a1227459ec36951716066c, type: 3}
   projectile: {fileID: 11400000, guid: 76c3d055378396d4dbdc8a9ef4237ab6, type: 2}
-  fireRate: 1
+  fireRate: 2
   fireVFX: {fileID: 0}
   fireSFX: {fileID: 8300000, guid: bcd8e14c0b5c7d74682fda4f6fe408a1, type: 3}
   upgrade: {fileID: 11400000, guid: a665de74be13c054a93640c9068cec91, type: 2}

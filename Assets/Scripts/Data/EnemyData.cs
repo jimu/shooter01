@@ -9,7 +9,7 @@ public class EnemyData : ScriptableObject
     new public string name;
 
     [Tooltip("Enemy label appears on prefab")]
-    new public string label;
+    public string label;
 
     [Tooltip("Prefab used to instantiate this enemy")]
     public GameObject prefab;
@@ -33,7 +33,7 @@ public class EnemyData : ScriptableObject
     public int health;
 
     [Tooltip("Speed of this enemy")]
-    public int speed;
+    public float speed;
 
     [Tooltip("Score value of this enemy")]
     public int score;

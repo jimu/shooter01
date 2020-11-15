@@ -57,6 +57,8 @@ public class GameManager : MonoSingleton<GameManager>
         {
             if (Input.GetButtonDown("Cancel"))
                 OnEscapePressed();
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                ToggleDebugPanel();
             if (Input.GetKeyDown(KeyCode.Alpha4))
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>().TogglePerspective();
             if (Input.GetKeyDown(KeyCode.Alpha5))
@@ -73,6 +75,10 @@ public class GameManager : MonoSingleton<GameManager>
         }
     }
 
+    private void ToggleDebugPanel()
+    {
+        debugPanel.SetActive(!debugPanel.activeSelf);
+    }
 
     public void Win()
     {

@@ -31,11 +31,11 @@ public class PlayerFireController : MonoBehaviour
         isAutoFiring = true;
 
 #endif
-        if (Input.GetKeyDown(KeyCode.G) || Input.GetButtonDown("Submit"))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("Submit"))
             FireWeapon(weaponMounts[0].weapons[0], weaponMounts[0].transform);
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.D))
             FireWeapon(weaponMounts[1].weapons[0], weaponMounts[1].transform);
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.A))
             FireWeapon(weaponMounts[2].weapons[0], weaponMounts[2].transform);
         if (Input.GetKeyDown(KeyCode.Alpha2))
             ToggleAutoFire();

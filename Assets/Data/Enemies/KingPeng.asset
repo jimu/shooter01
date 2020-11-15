@@ -21,7 +21,7 @@ MonoBehaviour:
   fireSFX: {fileID: 8300000, guid: 7522b519a9e3b874eacae65590b82282, type: 3}
   fireVFX: {fileID: 0}
   health: 100
-  speed: 0
+  speed: 0.2
   score: 10
   hurtSFX: {fileID: 8300000, guid: 4a7493fd2ce18b54fb30e1e404237e0e, type: 3}
   hurtVFX: {fileID: 0}

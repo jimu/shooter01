@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Laser Level 2
   prefab: {fileID: 4874765466974331788, guid: 4293de6ea7b5b6c4786f6ee46ee44be7, type: 3}
   projectile: {fileID: 11400000, guid: 7ed8eaa7dc7979640bc3f511ed94f308, type: 2}
-  fireRate: 1.8
+  fireRate: 5
   fireVFX: {fileID: 0}
   fireSFX: {fileID: 8300000, guid: ae70ade985f089c4c8736ae8899b7d54, type: 3}
   upgrade: {fileID: 0}
