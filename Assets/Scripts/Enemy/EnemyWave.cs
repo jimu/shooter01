@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// defines a squadron of like enemies following a path.
+// multiple waves form a stage
+
 #pragma warning disable 0649
 public class EnemyWave : MonoBehaviour
 {

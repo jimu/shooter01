@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// one lousy helper function used by player and enemy alike
 public class ProjectileLauncher
 {
     static public GameObject Launch(ProjectileData projectile, AudioClip sfx, Transform transform)

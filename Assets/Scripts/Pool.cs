@@ -5,6 +5,8 @@ using UnityEngine;
 
 #pragma warning disable 0649
 
+// implements a pool for a specific prefab
+// used by PoolManager
 public class Pool
 {
     GameObject prefab;
@@ -20,24 +22,6 @@ public class Pool
     List<GameObject> pool = new List<GameObject>();
     int lastIndex = -1;
 
-    /*
-    public GameObject Get()
-    {
-        for (int count = pool.Count; count-- > 0;)
-        {
-            lastIndex = (lastIndex + 1) % pool.Count;
-            if (pool[lastIndex] == null)
-                return pool[lastIndex] = GameObject.Instantiate(prefab);
-            if (!pool[lastIndex].activeSelf)
-            {
-                GameObject o = pool[lastIndex];
-                o.SetActive(true);
-                return o;
-            }
-        }
-        return null;
-    }
-    */
     public GameObject Get(Vector3 position)
     {
         GameObject o;
@@ -81,10 +65,4 @@ public class Pool
         return o;
     }
 
-    /*
-    public void Release(GameObject o)
-    {
-        o.SetActive(false);
-    }
-    */
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Constructs a path from it's children
+// enemy waves follow this path
 public class Waypoints : MonoBehaviour
 {
     public List<Vector3> waypoints;

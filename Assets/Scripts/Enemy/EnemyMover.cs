@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// moves enemies along a path. path can optionally loop
 public class EnemyMover : MonoBehaviour
 {
     public Waypoints path;

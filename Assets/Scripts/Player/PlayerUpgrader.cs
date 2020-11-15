@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// upgrades a random player attribute. very basic. very random.
+
 public enum Upgrade { Gun, Laser, Missile, Speed, MaxHealth, Repair}
 public class PlayerUpgrader : MonoBehaviour
 {

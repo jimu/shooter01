@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// hurts MonoDamagable objecs
 public class Damager : MonoBehaviour
 {
 

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 #pragma warning disable 0649
 
+// mostly manages menus, scoring and game end.  should move menus out of this class
+
 public enum GameState { Null = 0, Init, StartMenu, Play, Pause, Help, Win, Lose };
 public class GameManager : MonoSingleton<GameManager>
 {

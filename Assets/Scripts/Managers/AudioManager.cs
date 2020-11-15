@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// audio source
 public class AudioManager : MonoSingleton<AudioManager>
 {
     AudioSource audioSource;

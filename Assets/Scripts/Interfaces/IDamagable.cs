@@ -2,6 +2,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// implements entities with health (player, enemies, walls)
+// notifies listeners (like health bars) of health changes 
 interface IDamagable
 {
     void SubscribeHealthChanged(Action<float> action);

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// handles shooting and upgrading player's three types of weapons
+
 public class PlayerFireController : MonoBehaviour
 {
     public WeaponMount[] weaponMounts;
@@ -12,10 +14,6 @@ public class PlayerFireController : MonoBehaviour
     {
         foreach(WeaponMount mount in weaponMounts)
             SetWeapon(mount);
-
-
-
-
     }
 
     void SetWeapon(WeaponMount mount, GameObject prefab = null)
@@ -28,7 +26,8 @@ public class PlayerFireController : MonoBehaviour
     void Update()
     {
 #if UNITY_IOS || UNITY_ANDROID
-        isAutoFiring = true;
+        if (!isAutoFiring)
+            ToggleAutoFire();
 
 #endif
         if (Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("Submit"))

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// deals with the player colliding with bonuses and enemies.
+// see projectiles for player-projectile damage
+
 [RequireComponent(typeof(HealthController))]
 public class PlayerCollision : MonoBehaviour
 {

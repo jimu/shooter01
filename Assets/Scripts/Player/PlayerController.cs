@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// highest level player-controlling object
 public class PlayerController : MonoBehaviour
 {
     HealthController healthController;

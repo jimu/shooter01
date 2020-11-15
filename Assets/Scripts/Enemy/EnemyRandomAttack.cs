@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// implmenets enemy's who fire at a random rate/chance
 public class EnemyRandomAttack : MonoBehaviour
 {
     EnemyData data;
