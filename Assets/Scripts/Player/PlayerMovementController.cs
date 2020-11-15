@@ -134,8 +134,6 @@ public class PlayerMovementController : MonoBehaviour
 
         }
     }
-
-
     public void UpgradeSpeed()
     {
         speed += SPEED_UPGRADE_AMOUNT;

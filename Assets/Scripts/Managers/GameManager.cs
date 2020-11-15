@@ -57,12 +57,6 @@ public class GameManager : MonoSingleton<GameManager>
         {
             if (Input.GetButtonDown("Cancel"))
                 OnEscapePressed();
-            if (Input.GetButtonDown("Submit"))
-                AddScore(1);
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-                Win();
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-                Lose();
             if (Input.GetKeyDown(KeyCode.Alpha4))
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>().TogglePerspective();
             if (Input.GetKeyDown(KeyCode.Alpha5))
@@ -78,6 +72,7 @@ public class GameManager : MonoSingleton<GameManager>
                 }
         }
     }
+
 
     public void Win()
     {
